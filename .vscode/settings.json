@@ -53,6 +53,10 @@
         "temp/":true,
         "Temp/":true
     },
+<<<<<<< HEAD
     "dotnet.defaultSolution": "lm.sln",
     "dotnet.preferCSharpExtension": true
+=======
+    "dotnet.defaultSolution": "lm.sln"
+>>>>>>> devBranch
 }
