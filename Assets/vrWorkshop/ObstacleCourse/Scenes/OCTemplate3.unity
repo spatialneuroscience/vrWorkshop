@@ -121,6 +121,70 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &173542003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090152949284771720, guid: 564e51ef5d47049d5891ab8c90dd2b8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 894936000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &666376059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090152949142815792, guid: 564e51ef5d47049d5891ab8c90dd2b8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 894936000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &666376061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666376059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353a2a5fd9bc549aebdcbeb00a783529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friend: {fileID: 1611532917}
+--- !u!114 &666376062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666376059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353a2a5fd9bc549aebdcbeb00a783529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friend: {fileID: 173542003}
+--- !u!114 &666376063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666376059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353a2a5fd9bc549aebdcbeb00a783529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friend: {fileID: 1235995570}
+--- !u!114 &666376064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666376059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353a2a5fd9bc549aebdcbeb00a783529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friend: {fileID: 1640832984}
 --- !u!1 &734047272
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,5 +522,48 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6090152949504581357, guid: 564e51ef5d47049d5891ab8c90dd2b8a, type: 3}
+    - {fileID: 6090152949142815802, guid: 564e51ef5d47049d5891ab8c90dd2b8a, type: 3}
+    - {fileID: 6090152949142815803, guid: 564e51ef5d47049d5891ab8c90dd2b8a, type: 3}
+    - {fileID: 6090152949142815800, guid: 564e51ef5d47049d5891ab8c90dd2b8a, type: 3}
+    - {fileID: 6090152949142815797, guid: 564e51ef5d47049d5891ab8c90dd2b8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 564e51ef5d47049d5891ab8c90dd2b8a, type: 3}
+--- !u!1 &910611212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090152949504581356, guid: 564e51ef5d47049d5891ab8c90dd2b8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 894936000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &910611214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910611212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f8b873be10043498c2489b024667dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpForce: 5
+--- !u!1 &1235995570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090152950859569790, guid: 564e51ef5d47049d5891ab8c90dd2b8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 894936000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1611532917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090152949327563569, guid: 564e51ef5d47049d5891ab8c90dd2b8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 894936000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1640832984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090152949219366540, guid: 564e51ef5d47049d5891ab8c90dd2b8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 894936000}
+  m_PrefabAsset: {fileID: 0}
