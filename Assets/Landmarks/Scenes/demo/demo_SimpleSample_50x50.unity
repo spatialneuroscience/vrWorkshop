@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1836716, g: 0.22918393, b: 0.30547926, a: 1}
+  m_IndirectSpecularColor: {r: 0.18360132, g: 0.22910744, b: 0.30537397, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1291,6 +1291,53 @@ Transform:
   m_Father: {fileID: 868073012}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &959266848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8477616651272562215, guid: 4e09813be04144d928219cb9abe866cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1529012552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &959266849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959266848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1add596f489424c4ea32723d7a820ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skip: 0
+  canIncrementLists: 1
+  interval: 0
+  interruptTasks: {fileID: 0}
+  interruptInterval: 0
+  repeatInterrupts: 9999
+  currentInterrupt: 0
+  pausedTasks: {fileID: 0}
+  parentTask: {fileID: 0}
+  firstPersonCamera: {fileID: 0}
+  overheadCamera: {fileID: 0}
+  debugButton: {fileID: 0}
+  actionButton: {fileID: 0}
+  vrEnabled: 0
+  taskLog: {fileID: 0}
+  triggerLabel: 
+  triggerOnStart: 0
+  triggerOnEnd: 0
+  start: {fileID: 0}
+  destination: {fileID: 0}
+  destinationListName: ListNavigationStarts
+  destinations: {fileID: 0}
+  swap: 0
+  randomRotation: 0
+  scaledPlayer: 0
+  ignoreY: 0
+  useSnapPoint: 0
+  localOffsetFacing: {x: 0, y: 0, z: 0}
+  blockRepeat: 0
 --- !u!1 &1155273992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,7 +1999,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: TASK_NavigationTask
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5335049405014025327, guid: 4e09813be04144d928219cb9abe866cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4e09813be04144d928219cb9abe866cf, type: 3}
 --- !u!1 &1540131662
 GameObject:
