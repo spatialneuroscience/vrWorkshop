@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
+using System.Linq;
 
 public enum HideTargetOnStart
 {
@@ -21,6 +22,7 @@ public class NavigationTask : ExperimentTask
     [Tooltip("Leave blank for free exploration")]
     public ObjectList destinations;
 	public GameObject currentTarget;
+    public ObjectList spawningNewPillars;
 
     public TextAsset NavigationInstruction;
 
@@ -75,6 +77,7 @@ public class NavigationTask : ExperimentTask
     public bool logStartEnd;
     private Vector3 startXYZ;
     private Vector3 endXYZ;
+    public bool isExploration;
 
     public override void startTask ()
 	{
@@ -103,11 +106,11 @@ public class NavigationTask : ExperimentTask
             exploration = true;
 
             //// Make a dummy placeholder for exploration task to avoid throwing errors
-            //var tmp = new List<GameObject>();
-            //tmp.Add(gameObject);
-            //gameObject.AddComponent<ObjectList>();
-            //gameObject.GetComponent<ObjectList>().objects = tmp;
-            //destinations = gameObject.GetComponent<ObjectList>();
+            var tmp = new List<GameObject>();
+            tmp.Add(gameObject);
+            gameObject.AddComponent<ObjectList>();
+            gameObject.GetComponent<ObjectList>().objects = tmp;
+            destinations = gameObject.GetComponent<ObjectList>();
         }
 
         hud.showEverything();
@@ -252,6 +255,27 @@ public class NavigationTask : ExperimentTask
         if (logStartEnd) startXYZ = avatar.GetComponent<LM_PlayerController>().collisionObject.transform.position;
             
         if (vrEnabled & haptics) SteamVR_Actions.default_Haptic.Execute(0f, 2.0f, 65f, 1f, SteamVR_Input_Sources.Any);
+
+        GameObject[] newPillars = GameObject.FindGameObjectsWithTag("newPillars");
+        foreach (GameObject pillar in newPillars)
+        {
+            MeshRenderer meshRenderer = pillar.GetComponent<MeshRenderer>();
+            BoxCollider boxCollider = pillar.GetComponent<BoxCollider>();
+            if (meshRenderer != null && boxCollider != null)
+            {
+                // Set enabled state based on isExploration
+                bool enabledState = !isExploration;
+                meshRenderer.enabled = enabledState;
+                boxCollider.enabled = enabledState;
+
+                Debug.Log($"Turning {(enabledState ? "on" : "off")} mesh renderer and box collider for pillar: {pillar.name}");
+            }
+            else
+            {
+                Debug.Log("MeshRenderer component not found on pillar: " + pillar.name);
+            }
+        }
+        
     }
 
     public override bool updateTask ()

@@ -97,6 +97,8 @@ public class Experiment : MonoBehaviour
     protected HUD hud;
 
     public TextMeshProUGUI trialCounter;
+    
+
 
     // -------------------------------------------------------------------------
     // -------------------------- Builtin Methods ------------------------------
